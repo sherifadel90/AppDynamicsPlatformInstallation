@@ -21,36 +21,36 @@ In this exercise, you will be setting up the Enterprise Console.  This utility p
 
 2. Copy the .sh file to your Host either using SCP on if your Desktop is MAC/Linux or using WINSCP if your Desktop is Windows
 
-3.	Make the installer script executable:s
-		<pre><code>
- 		chmod a+x platform-setup-x64-linux-4.5.x.x.sh
- 		</code></pre>
+3. Make the installer script executable:
+	<pre><code>
+ 	chmod a+x platform-setup-x64-linux-4.5.x.x.sh
+ 	</code></pre>
 
-2.	Install the Platform Admin software:
-		<pre><code>
- 		./platform-setup-x64-linux-4.5.x.x.sh
- 		</code></pre>
+4. Install the Platform Admin software:
+	<pre><code>
+ 	./platform-setup-x64-linux-4.5.x.x.sh
+ 	</code></pre>
     with inputing the below
-    <pre><code>
- 		Use /opt/appd/platform as the install destination
-    Use AppD123 as the database root password
-    Accept the default database port, 3377
-    Use AppD123 as the Enterprise Console Database Password
-    Do not enable HTTPS connections
-    Enter the public DNS name of the lab EC2 instance
-    Accept the default Enterprise console port, 9191
-    Accept the default Enterprise Console Root User name, admin
-    Set the Enterprise Console Root User Password to AppD123
-    Confirm AppD123 as the Platform Admin Root User Password
- 		</code></pre>
+    	<pre><code>
+ 	Use /opt/appd/platform as the install destination
+    	Use AppD123 as the database root password
+    	Accept the default database port, 3377
+    	Use AppD123 as the Enterprise Console Database Password
+    	Do not enable HTTPS connections
+    	Enter the public DNS name of the lab EC2 instance
+    	Accept the default Enterprise console port, 9191
+    	Accept the default Enterprise Console Root User name, admin
+    	Set the Enterprise Console Root User Password to AppD123
+    	Confirm AppD123 as the Platform Admin Root User Password
+ 	</code></pre>
     After a few minutes, you should see output similar to that shown below...
-    <pre><code>
-    Setup has finished installing AppDynamics Enterprise Console on your computer.  To install and manage your AppDynamics Platform, use the Enterprise Console CLI from /opt/appd/platform/platform-admin/bin directory.
-Finishing installation …
-    </code></pre>
+    	<pre><code>
+    	Setup has finished installing AppDynamics Enterprise Console on your computer.  
+	To install and manage your AppDynamics Platform, use the Enterprise Console CLI from /opt/appd/platform/platform-admin/bin directory.
+	Finishing installation …
+    	</code></pre>
 
-1.4 -	To confirm the Enterprise Console is functioning properly, verify you can connect to its URL in a web browser and authenticate using the information specified in steps 1.3.g - 1.3.i
-
+5. To confirm the Enterprise Console is functioning properly, verify you can connect to its URL in a web browser and authenticate using the information specified in steps 1.3.g - 1.3.i
 http://[your-ip-address]:[Enterprise Console Port]
 
 
