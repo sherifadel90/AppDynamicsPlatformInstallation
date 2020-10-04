@@ -22,8 +22,8 @@ The software versions used in the lab are the most recent generally available at
 - **Operating System:** Linux or Windows  (The Guide below is based on Linux OS)
 - **Linux Distribution:** Any from the below list (The Guide below is based on CentOS)
 ![SupportedOperatingSystems](assets/images/00-Supported-OperatingSystems.png)
-- **CPU:** 2 Cores (Minimum)
-- **Memory:** 8 GB RAM (Minimum)
+- **CPU:** 4 Cores (Minimum)
+- **Memory:** 32 GB RAM (Minimum)
 - **Storage:** 60 GB (Mimimum)
 
 ### Step 2: Enterprise Console Requirements
@@ -173,7 +173,7 @@ The EUM Server is not currently integrated with the Enterprise Console so the in
 	- Note the **Events Service Key** for later use.
 	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/13-EUMKey.png" width="600">
  
-3. Configure the Controller for EUM by updating the following parameter values in the Administration Console, clicking the Save button after each change
+3. Connect the EUM Server with the AppDynamics Controller by updating the following parameter values in the Administration Console, clicking the Save button after each change
 	- eum.beacon.host = [your-ip-address]:7001
 	- eum.beacon.https.host = https://[your-ip-address]:7002
 	- eum.cloud.host = http://localhost:7001
@@ -200,15 +200,14 @@ The EUM Server is not currently integrated with the Enterprise Console so the in
     with inputing the below
     	<pre><code>
 	I accept the agreement: 1
-	Where should AppDynamics Enterprise Console be installed?: /opt/appdynamics/platform
-	Database Root User Password: AppD123
-	Database Port: 3377 (default)
-	Enterprise Console Database Password: AppD123
-	Enable Https Connection: n
-	Enterprise Console Host Name: In case of AWS, Enter the public DNS name of the lab EC2 instance
-	Enterprise Console Port: 9191 (default)
-	Enterprise Console Root User Name: admin (default)
-	Enterprise Console Root User Password: AppD123
+	Where should AppDynamics End User Monitoring be installed?: /opt/appdynamics/eum
+	Select Installation Type: 1 (Demo)
+	Database Port: 3388 (default)
+	Root User Password: welcome1 (the same as specified during the Controller Database Setup)
+	eum_user Password: AppD123
+	HTTP Port: 7001 (default)
+	HTTPS Port: 7002 (default)
+	Key Store Password: AppD123
  	</code></pre>
     After a few minutes, you should see output similar to that shown below...
     	<pre><code>
@@ -218,47 +217,64 @@ The EUM Server is not currently integrated with the Enterprise Console so the in
    	 *  Configure the Events Service properties and other properties in the file EUM_HOME/bin/eum.properties, then restart AppDynamics End User Monitoring Server
    	 *  Connect the AppDynamics End User Monitoring Server with AppDynamics Controller through the Controller Administration Console.
    	 For more information, see EUM Server Deployment.
+	 Finishing installation ...
     	</code></pre>
-
-
+	
 8. Verify the EUM Server is running by pinging the EUM Server port in a browser.  A successful “ping” response confirms it is responding properly.
-
+	<pre><code>
+ 	http://[your-ip-address]:7001/_ping
+ 	</code></pre>
+	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/15-EUMPing.png" width="600">
  
-9. From the EUM processor directory on on the lab host (you must be in this directory for the command to run properly), provision the EUM portion of the license file from step 2.9:
+9. From the EUM processor directory on on the lab host (you must be in this directory for the command to run properly), provision the EUM portion of the license file:
+	<pre><code>
+ 	cd /opt/appdynamics/eum/eum-processor
+	./bin/provision-license /opt/appdynamics/platform/product/controller/license.lic
+ 	</code></pre>
+	You should see output similar to that shown below…
+	<pre><code>
+	Reading the license file at /opt/appdynamics/platform/product/controller/license.lic
+	Successfully read the license file
+	Provisioning from license file /opt/appdynamics/platform/product/controller/license.lic
+	Register the account ...
+	AccountRegistrationResult:
+	isValid:true, isAlreadyRegistered:false, description:Successfully completed account registration, Account{accountName='test-eum-account-sherifmedhat-1601814891057', globalAccountName='bogus global account name', key='[FILTERED]', timestamp=1601826813030, lastAggregatedMin=1601826780000, accountStatus='Y', activityStatus='Y', lastActivityTimestamp=1601826813030, activityVersion='0', controllerEumApiVersion='0', controllerVersion='unknown', crMapFilesGeneration='-1', analyticAccountCreated='N', licenseTermsUpdateSourcePrecedence='0', deleted=false, deletedTime='1970-01-01T00:00:00.000Z}
 
-cd /opt/appd/eum/eum-processor
+EUM Account [test-eum-account-sherifmedhat-1601814891057] with key [f3b8b684-913f-4642-a5e3-709468c566dc] is registered and license terms are provisioned in the EUM PROCESSOR
+	</code></pre>
+	The Warning message above can be ignored…
 
-./bin/provision-license /opt/appd/platform/product/controller/license.lic
-(single command)
-
-You should see output similar to that shown below…
-Reading the license file at /opt/appd/platform/product/controller/license.lic
-Successfully read the license file
-Provisioning from license file /opt/appd/platform/product/controller/license.lic
-Register the account …
-Mon Sep 03 00:19:54 UTC 2018 WARN: Establishing SSL connection without server's identity verification is not recommended. According to MySQL 5.5.45+, 5.6.26+ and 5.7.6+ requirements SSL connection must be established by default if explicit option isn't set. For compliance with existing applications not using SSL the verifyServerCertificate property is set to 'false'. You need either to explicitly disable SSL by setting useSSL=false, or set useSSL=true and provide truststore for server certificate verification.
-
-.... The Warning message above can be ignored…
-
-AccountRegistrationResult:
-isValid:true, isAlreadyRegistered:false, description:Successfully completed account registration, Account{accountName='test-eum-account-masterslab-1535922245952', globalAccountName='bogus global account name', key='[FILTERED]', timestamp=1535933994530, lastAggregatedMin=1535933940000, accountStatus='Y', activityStatus='Y', lastActivityTimestamp=1535933994530, activityVersion='0', controllerEumApiVersion='0', controllerVersion='unknown', crMapFilesGeneration='-1', analyticAccountCreated='N', licenseTermsUpdateSourcePrecedence='0', deleted=false, deletedTime='1970-01-01T00:00:00.000Z}
-
-EUM Account [test-eum-account-masterslab-1535922245952] with key [e8156dbc-b268-4cbc-93ce-fefdf998f73f] registered and license terms provisioned in the EUM PROCESSOR
-
-10.Using a text editor of your choice, configure the Events Service properties by updating the following parameter values in the eum.properties file in /opt/appd/eum/eum-processor/bin/:
-a.	analytics.enabled=true
-b.	analytics.serverHost=<ec2-Public-DNS-name>
-c.	analytics.accountAccessKey=<eum_key> (the one collected in step 3.3)
+10.Using a text editor of your choice, configure the Events Service properties by updating the following parameter values in the eum.properties file in /opt/appdynamics/eum/eum-processor/bin/:
+	<pre><code>	
+	cd /opt/appdynamics/eum/eum-processor/bin/
+ 	vi eum.properties
+ 	</code></pre>
+	and change the below:
+	<pre><code>
+	analytics.enabled=true
+	analytics.serverHost=[your-ip-address]
+	analytics.accountAccessKey=[eum_key] (the one collected in step 2)
+	</code></pre>
 
 11. Remaining in the EUM processor directory on on the lab host (you must be in this directory for the command to run properly), restart the EUM Server by stopping the service, confirming the process is no longer running, and starting it:
+	<pre><code>
+	cd /opt/appdynamics/eum/eum-processor/
+	bin/eum.sh stop
+	ps -ef | grep -i eum | grep -v grep (no process should be listed)
+	bin/eum.sh start
+	ps -ef | grep -i eum | grep -v grep
+	</code></pre>
 
-bin/eum.sh stop
-ps -ef | grep -i eum | grep -v grep (no process should be listed)
-bin/eum.sh start
-ps -ef | grep -i eum | grep -v grep
 
 12. In the Controller UI, confirm the EUM license has been applied by navigating to the Settings icon ( ⚙) in the upper right corner of the page and selecting License.  In the User Experience section of the page, the Account Name and License Key should be visible.  Additionally, the Edition should show EUM Pro or Mobile Pro for Browser Real User Monitoring and Mobile Real User Monitoring, respectively.
 
+
+-----
+
+bin/platform-admin.sh start-platform-admin
+bin/platform-admin.sh start-controller-db
+bin/platform-admin.sh start-controller-appserver
+bin/platform-admin.sh submit-job --platform-name <platform_name> --service events-service --job start
 
 
 
