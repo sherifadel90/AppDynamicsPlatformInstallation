@@ -112,6 +112,6 @@ The Controller provides the main AppDynamics GUI which is backed by a MySQL data
 
 Installation of both components can be accomplished using the CLI, but that procedure is beyond the scope of this lab.  
 Also note that the lab focuses on installation and configuration procedures in a learning environment, but you should be aware that additional steps may be necessary to address security, performance, availability, and scalability considerations in a production deployment.  
-Reference documentation can be found on the AppDynamics web site - Controller Documentation and Events Service Documentation.
+Reference documentation can be found on the AppDynamics web site - [Controller Documentation](https://docs.appdynamics.com/display/PRO45/Controller+Deployment) and [Events Service Documentation](https://docs.appdynamics.com/display/PRO45/Events+Service+Deployment).
 
 
