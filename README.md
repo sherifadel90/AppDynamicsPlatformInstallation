@@ -44,7 +44,8 @@ Reference documentation can be found on the AppDynamics documents site - [Enterp
 2.  AppDynamics requires the following hard and soft per-user limits in Linux: 
     * Open file descriptor limit (nofile): 65535
     * Process limit (nproc): 8192  
-   Following the steps in [Configure User Limits in Linux Controllers](https://docs.appdynamics.com/display/PRO45/Prepare+Linux+for+the+Controller#PrepareLinuxfortheController-configure_in_linuxConfigureUserLimitsinLinux).
+    
+    Following the steps in [Configure User Limits in Linux Controllers](https://docs.appdynamics.com/display/PRO45/Prepare+Linux+for+the+Controller#PrepareLinuxfortheController-configure_in_linuxConfigureUserLimitsinLinux):
   	<pre><code>
 	vi /etc/security/limits.d  	
  	</code></pre>
