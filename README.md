@@ -213,9 +213,9 @@ The EUM Server is not currently integrated with the Enterprise Console so the in
     	<pre><code>
     	Setup has finished installing AppDynamics End User Monitoring on your computer.
 	To finish setting up AppDynamics End User Monitoring Server, you must complete these post installation tasks:
-   	 *  Provision the EUM license.
-   	 *  Configure the Events Service properties and other properties in the file EUM_HOME/bin/eum.properties, then restart AppDynamics End User Monitoring Server
-   	 *  Connect the AppDynamics End User Monitoring Server with AppDynamics Controller through the Controller Administration Console.
+   	 Provision the EUM license.
+   	 Configure the Events Service properties and other properties in the file EUM_HOME/bin/eum.properties, then restart AppDynamics End User Monitoring Server
+   	 Connect the AppDynamics End User Monitoring Server with AppDynamics Controller through the Controller Administration Console.
    	 For more information, see EUM Server Deployment.
 	 Finishing installation ...
     	</code></pre>
@@ -240,11 +240,11 @@ The EUM Server is not currently integrated with the Enterprise Console so the in
 	AccountRegistrationResult:
 	isValid:true, isAlreadyRegistered:false, description:Successfully completed account registration, Account{accountName='test-eum-account-sherifmedhat-1601814891057', globalAccountName='bogus global account name', key='[FILTERED]', timestamp=1601826813030, lastAggregatedMin=1601826780000, accountStatus='Y', activityStatus='Y', lastActivityTimestamp=1601826813030, activityVersion='0', controllerEumApiVersion='0', controllerVersion='unknown', crMapFilesGeneration='-1', analyticAccountCreated='N', licenseTermsUpdateSourcePrecedence='0', deleted=false, deletedTime='1970-01-01T00:00:00.000Z}
 
-EUM Account [test-eum-account-sherifmedhat-1601814891057] with key [f3b8b684-913f-4642-a5e3-709468c566dc] is registered and license terms are provisioned in the EUM PROCESSOR
+	EUM Account [test-eum-account-sherifmedhat-1601814891057] with key [f3b8b684-913f-4642-a5e3-709468c566dc] is registered and license terms are provisioned in the EUM PROCESSOR
 	</code></pre>
 	The Warning message above can be ignored…
 
-10.Using a text editor of your choice, configure the Events Service properties by updating the following parameter values in the eum.properties file in /opt/appdynamics/eum/eum-processor/bin/:
+10. Using a text editor of your choice, configure the Events Service properties by updating the following parameter values in the eum.properties file in /opt/appdynamics/eum/eum-processor/bin/:
 	<pre><code>	
 	cd /opt/appdynamics/eum/eum-processor/bin/
  	vi eum.properties
