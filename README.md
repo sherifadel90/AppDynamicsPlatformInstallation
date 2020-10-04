@@ -118,10 +118,10 @@ Reference documentation can be found on the AppDynamics web site - [Controller D
 <img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/03-ExpressInstall-Step.png" width="600">
 
 2. In the **Name the Platform** section, Provide a name of your choice for the platform and confirm the default **Installation Path** value is a subdirectory of the installation directory we specified earlier.
-<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/04-NamePlatform-section" width="600">
+<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/04-NamePlatform-section.png" width="600">
 
 3. In the **Add a Host** section, choose Use Enterprise Console Host.
-<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/05-AddHost-section" width="600">
+<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/05-AddHost-section.png" width="600">
 
 4. In the **Install the Controller** section:
 	- Select the **Demo profile**
@@ -129,7 +129,7 @@ Reference documentation can be found on the AppDynamics web site - [Controller D
 	- Set the Controller **Admin Password** to **welcome1**
 	- Set the Controller Controller Root User Password to **welcome1**
 	- Set Database Root Password to **welcome1**
-	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/06-InstallController-section" width="600">
+	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/06-InstallController-section.png" width="600">
 
 5. Click the **Submit** button
 
