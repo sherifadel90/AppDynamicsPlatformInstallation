@@ -45,12 +45,13 @@ Note: the above required libraries are based on Red Hat and CentOS, for other Di
 
 In this exercise, you will be setting up the Enterprise Console.  This utility provides a browser-based user interface that allows an AppDynamics administrator to install and manage the Controller and Events Service components of the AppDynamics platform.  A CLI for the Enterprise Console is available, but is outside the scope of this lab.  Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Documentation](https://docs.appdynamics.com/display/PRO45/Enterprise+Console, "Enterprise Console Documentation").
 
-1. Download the Platform Admin software to the lab host. Log into that site with permissions to download the "Enterprise Console - 64-bit Linux(sh)"
+1. Download the Platform Admin software to the lab host.
+   Log into that site with permissions to download the "Enterprise Console - 64-bit Linux(sh)"
 ![EnterpirseConsoleDownload](assets/images/01-EnterpirseConsoleDownload.png)
 
 2. Copy the .sh file to your Host either using SCP on if your Desktop is MAC/Linux or using WINSCP if your Desktop is Windows
 
-3. On th Host, Make the installer script executable:
+3. On the Host, Make the installer script executable:
 	<pre><code>
  	chmod a+x platform-setup-x64-linux-20.x.x.x.sh
  	</code></pre>
@@ -81,7 +82,9 @@ In this exercise, you will be setting up the Enterprise Console.  This utility p
     	</code></pre>
 
 5. To confirm the Enterprise Console is functioning properly, verify you can connect to its URL in a web browser and authenticate using the information specified in the installation
-http://[your-ip-address]:[Enterprise Console Port]
+ 	<pre><code>
+	http://[your-ip-address]:[Enterprise Console Port]
+	</code></pre>
 
 ### Step 4: AppDynamics Controller & Events Service
 
