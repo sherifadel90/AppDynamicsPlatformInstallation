@@ -4,7 +4,7 @@
 
 This lab guides you through the process of installing and configuring the AppDynamics platform components for an on-premise deployment.  The architecture diagram below shows these components with their communication paths and payloads.  
 ![OnpremiseDiagram](assets/images/00-onpremise-diagram.jpg)
-<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/00-onpremise-diagram.jpg" width="20">
+<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/00-onpremise-diagram.jpg" width="100">
 
 In this Lab for simplicity we will install all AppDynamics Components (Enterprise Console, Controller, Events Service, End User Monitoring Server) on a Standalone Virtual Machine.
 
