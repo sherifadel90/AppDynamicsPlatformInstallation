@@ -14,9 +14,9 @@ The software versions used in the lab are the most recent generally available at
 
 # Exercise 1: Enterprise Console (aka Platform Admin)
 
-In this exercise, you will be setting up the Enterprise Console.  This utility provides a browser-based user interface that allows an AppDynamics administrator to install and manage the Controller and Events Service components of the AppDynamics platform.  A CLI for the Enterprise Console is available, but is outside the scope of this lab.  Reference documentation can be found on the AppDynamics documents site - [I'm an inline-style link with title](https://docs.appdynamics.com/display/PRO45/Enterprise+Console "Enterprise Console Documentation").
+In this exercise, you will be setting up the Enterprise Console.  This utility provides a browser-based user interface that allows an AppDynamics administrator to install and manage the Controller and Events Service components of the AppDynamics platform.  A CLI for the Enterprise Console is available, but is outside the scope of this lab.  Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Documentation](https://docs.appdynamics.com/display/PRO45/Enterprise+Console "Enterprise Console Documentation").
 
-1. Download the Platform Admin software to the lab host.  The command below assumes you have created an account on www.appdynamics.com and can log into that site with permissions to download software
+1. Download the Platform Admin software to the lab host.  The command below assumes you have created an account on [I'm an inline-style link](www.appdynamics.com) www.appdynamics.com and can log into that site with permissions to download software
 ![EnterpirseConsoleDownload](assets/images/01-EnterpirseConsoleDownload.png)
 
 2. Copy the .sh file to your Host either using SCP on if your Desktop is MAC/Linux or using WINSCP if your Desktop is Windows
