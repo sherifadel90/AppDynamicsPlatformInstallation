@@ -262,19 +262,25 @@ EUM Account [test-eum-account-sherifmedhat-1601814891057] with key [f3b8b684-913
 	bin/eum.sh stop
 	ps -ef | grep -i eum | grep -v grep (no process should be listed)
 	bin/eum.sh start
-	ps -ef | grep -i eum | grep -v grep
+	ps -ef | grep -i eum | grep -v grep (one process should be listed)
 	</code></pre>
 
-
 12. In the Controller UI, confirm the EUM license has been applied by navigating to the Settings icon ( ⚙) in the upper right corner of the page and selecting License.  In the User Experience section of the page, the Account Name and License Key should be visible.  Additionally, the Edition should show EUM Pro or Mobile Pro for Browser Real User Monitoring and Mobile Real User Monitoring, respectively.
+<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/16-EUMLicense.png" width="600">
 
 
 -----
 
-bin/platform-admin.sh start-platform-admin
-bin/platform-admin.sh start-controller-db
-bin/platform-admin.sh start-controller-appserver
-bin/platform-admin.sh submit-job --platform-name <platform_name> --service events-service --job start
+### Notes
+
+1. In case of a Server restart, you can perform the below to start back all the serivces:
+	<pre><code>
+	cd /opt/appdynamics/platform/platform-admin
+	bin/platform-admin.sh start-platform-admin
+	bin/platform-admin.sh start-controller-db
+	bin/platform-admin.sh start-controller-appserver
+	bin/platform-admin.sh submit-job --platform-name AppDPlatform --service events-service --job start
+	</code></pre>
 
 
 
