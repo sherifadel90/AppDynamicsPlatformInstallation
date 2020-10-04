@@ -32,14 +32,20 @@ The Enterprise Console can run on the same host as the Controller and the embedd
 
 Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Requirements](https://docs.appdynamics.com/display/PRO45/Enterprise+Console+Requirements, "Enterprise Console Requirements").
 
-- We will need to install these required libraries
+1. We will need to install these required libraries
 	<pre><code>
  	yum install libaio
 	yum install numactl
 	yum install tzdata
-	yum install ncurses-libs-5
+	yum install ncurses-libs
  	</code></pre>
-Note: the above required libraries are based on Red Hat and CentOS, for other Distros, please refer to [Enterprise Console Requirements](https://docs.appdynamics.com/display/PRO45/Enterprise+Console+Requirements, "Enterprise Console Requirements").
+	Note: the above required libraries are based on Red Hat and CentOS, for other Distros, please refer to [Enterprise Console Requirements](https://docs.appdynamics.com/display/PRO45/Enterprise+Console+Requirements, "Enterprise Console Requirements").
+
+2.  AppDynamics requires the following hard and soft per-user limits in Linux: 
+    * Open file descriptor limit (nofile): 65535
+    * Process limit (nproc): 8192  
+
+https://docs.appdynamics.com/display/PRO45/Prepare+Linux+for+the+Controller#PrepareLinuxfortheController-configure_in_linuxConfigureUserLimitsinLinux
 
 ### Step 3: Install Enterprise Console (aka Platform Admin)
 
@@ -47,7 +53,7 @@ In this exercise, you will be setting up the Enterprise Console.  This utility p
 
 1. Download the Platform Admin software to the lab host.
    Log into that site with permissions to download the "Enterprise Console - 64-bit Linux(sh)"
-![EnterpirseConsoleDownload](assets/images/01-EnterpirseConsoleDownload.png)
+![EnterpirseConsoleDownload](assets/images/01-EnterpriseConsoleDownload.png)
 
 2. Copy the .sh file to your Host either using SCP on if your Desktop is MAC/Linux or using WINSCP if your Desktop is Windows
 
@@ -76,15 +82,17 @@ In this exercise, you will be setting up the Enterprise Console.  This utility p
  	</code></pre>
     After a few minutes, you should see output similar to that shown below...
     	<pre><code>
-    	Setup has finished installing AppDynamics Enterprise Console on your computer.  
-	To install and manage your AppDynamics Platform, use the Enterprise Console CLI from /opt/appd/platform/platform-admin/bin directory.
-	Finishing installation …
+    	Setup has finished installing AppDynamics Enterprise Console on your computer.
+	To install and manage your AppDynamics Platform, use the Enterprise Console
+	CLI from /opt/appdynamics/platform/platform-admin/bin directory.
+	Finishing installation ...
     	</code></pre>
 
-5. To confirm the Enterprise Console is functioning properly, verify you can connect to its URL in a web browser and authenticate using the information specified in the installation
+5. To confirm the Enterprise Console is functioning properly, verify you can connect to its URL in a web browser and authenticate using the information specified in the installation (Username: admin, Password: AppD123)
  	<pre><code>
-	http://[your-ip-address]:[Enterprise Console Port]
+	http://[your-ip-address]:[EnterpriseConsolePort]
 	</code></pre>
+	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/02-EnterpriseConsoleLogin.jpg" width="800">
 
 ### Step 4: AppDynamics Controller & Events Service
 
