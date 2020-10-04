@@ -2,7 +2,12 @@
 
 ## Description
 
-This lab guides you through the process of installing and configuring the AppDynamics platform components for an on-premise deployment.  The architecture diagram below shows these components with their communication paths and payloads.  In this lab, you will learn to:
+This lab guides you through the process of installing and configuring the AppDynamics platform components for an on-premise deployment.  The architecture diagram below shows these components with their communication paths and payloads.  
+![OnpremiseDiagram](assets/images/00-onpremise-diagram.png)
+
+In this Lab for simplicity we will install all AppDynamics Components (Enterprise Console, Controller, Events Service, End User Monitoring Server) on a Standalone Virtual Machine.
+
+In this Lab, you will learn to:
 1.Install the Enterprise Console (aka Platform Admin) tool
 2.Install and configure the AppDynamics Controller software
 3.Install and configure the Events Service
@@ -12,24 +17,47 @@ The software versions used in the lab are the most recent generally available at
 
 ## Setup
 
-# Exercise 1: Enterprise Console (aka Platform Admin)
+# Exercise 1: Prepare Virtual Machine Specs.
 
-In this exercise, you will be setting up the Enterprise Console.  This utility provides a browser-based user interface that allows an AppDynamics administrator to install and manage the Controller and Events Service components of the AppDynamics platform.  A CLI for the Enterprise Console is available, but is outside the scope of this lab.  Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Documentation](https://docs.appdynamics.com/display/PRO45/Enterprise+Console "Enterprise Console Documentation").
+- **Operating System:** Linux or Windows  (The Guide below is based on Linux OS)
+- **Linux Distribution:** Any from the below list (The Guide below is based on CentOS)
+![SupportedOperatingSystems](assets/images/00-Supported-OperatingSystems.png)
+- **CPU:** 2 Cores (Minimum)
+- **Memory:** 8 GB RAM (Minimum)
+- **Storage:** 60 GB (Mimimum)
 
-1. Download the Platform Admin software to the lab host.  The command below assumes you have created an account on www.appdynamics.com and can log into that site with permissions to download software
+# Exercise 2: Enterprise Console Requirements
+
+The Enterprise Console can run on the same host as the Controller and the embedded Events Service. If this is the case, the machine you choose to run the Enterprise Console must meet the requirements for all the components that run on that machine.
+
+Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Requirements](https://docs.appdynamics.com/display/PRO45/Enterprise+Console+Requirements, "Enterprise Console Requirements").
+
+We will need to install these required libraries
+Note: the below is based on Red Hat and CentOS, for other Distros, please refer to the above link.
+	<pre><code>
+ 	yum install libaio
+	yum install numactl
+	yum install tzdata
+	yum install ncurses-libs-5
+ 	</code></pre>
+
+# Exercise 2: Install Enterprise Console (aka Platform Admin)
+
+In this exercise, you will be setting up the Enterprise Console.  This utility provides a browser-based user interface that allows an AppDynamics administrator to install and manage the Controller and Events Service components of the AppDynamics platform.  A CLI for the Enterprise Console is available, but is outside the scope of this lab.  Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Documentation](https://docs.appdynamics.com/display/PRO45/Enterprise+Console, "Enterprise Console Documentation").
+
+1. Download the Platform Admin software to the lab host. Log into that site with permissions to download the "Enterprise Console - 64-bit Linux(sh)"
 ![EnterpirseConsoleDownload](assets/images/01-EnterpirseConsoleDownload.png)
 
 2. Copy the .sh file to your Host either using SCP on if your Desktop is MAC/Linux or using WINSCP if your Desktop is Windows
 
-3. Make the installer script executable:
+3. On th Host, Make the installer script executable:
 	<pre><code>
  	chmod a+x platform-setup-x64-linux-20.x.x.x.sh
  	</code></pre>
 
 4. Install the Platform Admin software:
 	<pre><code>
-	mkdir /opt/appdynamics/platform
-	chmod
+	sudo su
  	./platform-setup-x64-linux-20.x.x.x.sh
  	</code></pre>
     with inputing the below
