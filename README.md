@@ -182,6 +182,7 @@ The EUM Server is not currently integrated with the Enterprise Console so the in
 
 4. Download the EUM Server Installer Script to the lab host.
    Log into www.download.appdynamics.com to download the "EUM Server - 64-bit linux (sh)"
+
    <img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/14-EUMDownload.png" width="600">
 
 5. Copy the .sh file to your Host either using SCP on if your Desktop is MAC/Linux or using WINSCP if your Desktop is Windows
