@@ -23,12 +23,14 @@ In this exercise, you will be setting up the Enterprise Console.  This utility p
 
 3. Make the installer script executable:
 	<pre><code>
- 	chmod a+x platform-setup-x64-linux-4.5.x.x.sh
+ 	chmod a+x platform-setup-x64-linux-20.x.x.x.sh
  	</code></pre>
 
 4. Install the Platform Admin software:
 	<pre><code>
- 	./platform-setup-x64-linux-4.5.x.x.sh
+	mkdir /opt/appdynamics/platform
+	chmod
+ 	./platform-setup-x64-linux-20.x.x.x.sh
  	</code></pre>
     with inputing the below
     	<pre><code>
