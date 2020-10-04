@@ -120,7 +120,7 @@ Reference documentation can be found on the AppDynamics web site - [Controller D
 2. In the **Name the Platform** section, Provide a name of your choice for the platform and confirm the default **Installation Path** value is a subdirectory of the installation directory we specified earlier.
 <img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/04-NamePlatform-section.png" width="600">
 
-3. In the **Add a Host** section, choose Use Enterprise Console Host.
+3. In the **Add a Host** section, choose Use **Enterprise Console Host**.
 <img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/05-AddHost-section.png" width="600">
 
 4. In the **Install the Controller** section:
@@ -131,28 +131,28 @@ Reference documentation can be found on the AppDynamics web site - [Controller D
 	- Set Database Root Password to **welcome1**
 	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/06-InstallController-section.png" width="600">
 
-5. Click the **Submit** button
+5. Click the **Submit** button, The installation will begin immediately but it may take a few minutes before the jobs appear and begin reporting their progress on the page.
+<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/07-JobsStarting.png" width="600">
 
-The installation will begin immediately but it may take a few minutes before the jobs appear and begin reporting their progress on the page. 
+6. After the jobs have completed successfully (up to 15 minutes), click the Controller and Events Service sections to make sure each shows a health state of Normal.
+<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/08-JobsFinished.png" width="600">
 
-2.5 -	After the jobs have completed successfully (up to 15 minutes), click the Controller and Events Service sections to make sure each shows a health state of Normal.
-
-2.6 -	To confirm the Controller is running properly, verify you can connect to its URL in a web browser and authenticate using the information specified in steps 2.4.b and 2.4.c.
-
-http://<ec2-Public-DNS-name>:8090
-
-2.7 -	Ping the Events Service API port in a browser.  A successful “pong” response confirms the service is running properly.
-
-http://<ec2-Public-DNS-name>:9080/_ping
-
+7. To confirm the Controller is running properly, verify you can connect to its URL in a web browser and authenticate using the information specified in **Step 4** (Username: admin, Password: welcome1)
+	<pre><code>
+ 	http://[your-ip-address]:8090
+ 	</code></pre>
+	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/09-ControllerLogin.png" width="600">	
+	
+8. Ping the Events Service API port in a browser.  A successful “pong” response confirms the service is running properly.
+	<pre><code>
+ 	http://[your-ip-address]:9080/_ping
+ 	</code></pre>
+	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/10-EventsPing.png" width="600">
  
-2.8 -	Deploy the provided license file to the controller directory
+9. Deploy the provided license by coping your license file (.lic) to the controller directory at **/opt/appd/platform/product/controller/**
 
-sudo mv /home/appd/license.lic /opt/appd/platform/product/controller/
-
-2.9 -	In the Controller UI, confirm the new license has been applied by navigating to the Settings icon ( ⚙) in the upper right corner of the page and selecting License.  Make sure the the license details now show it as a Pro Trial edition and includes entitlements for five of each language agent.
-
-2.10 -	Note: If the licenses are not reflected as below, perform a Controller Restart (Without database restart) from the Platform Admin.
+10. In the Controller UI, confirm the new license has been applied by navigating to the Settings icon (⚙) in the upper right corner of the page and selecting License.  Make sure the the license details now show it as a Pro Trial edition and includes entitlements for different agents.
+Note: If the licenses are not reflected as below, perform a Controller Restart (Without database restart) from the Platform Admin.
 
 
 
