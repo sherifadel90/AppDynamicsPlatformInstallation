@@ -3,15 +3,15 @@
 ## Description
 
 This lab guides you through the process of installing and configuring the AppDynamics platform components for an on-premise deployment.  The architecture diagram below shows these components with their communication paths and payloads.  
-![OnpremiseDiagram](assets/images/00-onpremise-diagram.png)
+![OnpremiseDiagram](assets/images/00-onpremise-diagram.jpg)
 
 In this Lab for simplicity we will install all AppDynamics Components (Enterprise Console, Controller, Events Service, End User Monitoring Server) on a Standalone Virtual Machine.
 
 In this Lab, you will learn to:
-1.Install the Enterprise Console (aka Platform Admin) tool
-2.Install and configure the AppDynamics Controller software
-3.Install and configure the Events Service
-4.Install and configure the End User Monitoring (EUM) Server
+1. Install the Enterprise Console (aka Platform Admin) tool
+2. Install and configure the AppDynamics Controller software
+3. Install and configure the Events Service
+4. Install and configure the End User Monitoring (EUM) Server
 
 The software versions used in the lab are the most recent generally available at the time the lab was created.  As subsequent versions continue to be released, expect slight variations to command line output and screen shot graphics.  Though normally inconsequential, it is recommended to note these differences for reference in troubleshooting should they become significant.
 
