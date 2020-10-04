@@ -153,7 +153,7 @@ Reference documentation can be found on the AppDynamics web site - [Controller D
 
 10. In the Controller UI, confirm the new license has been applied by navigating to the Settings icon (⚙) in the upper right corner of the page and selecting License.  Make sure the the license details now show it as a Pro Trial edition and includes entitlements for different agents.
 Note: If the licenses are not reflected as below in 10 minutes, perform a Controller Restart (Without database restart) from the Platform Admin.
-<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/11-LicenseUsage" width="600">
+<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/11-LicenseUsage.png" width="600">
 
 
 ### Step 4: Install End User Monitoring Server
