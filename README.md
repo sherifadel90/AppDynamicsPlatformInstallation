@@ -114,4 +114,45 @@ Installation of both components can be accomplished using the CLI, but that proc
 Also note that the lab focuses on installation and configuration procedures in a learning environment, but you should be aware that additional steps may be necessary to address security, performance, availability, and scalability considerations in a production deployment.  
 Reference documentation can be found on the AppDynamics web site - [Controller Documentation](https://docs.appdynamics.com/display/PRO45/Controller+Deployment) and [Events Service Documentation](https://docs.appdynamics.com/display/PRO45/Events+Service+Deployment).
 
+1. From the Enterprise Console UI, select the Install tab and click the Express Install type.
+<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/03-ExpressInstall-Step.png" width="600">
+
+2. In the **Name the Platform** section, Provide a name of your choice for the platform and confirm the default **Installation Path** value is a subdirectory of the installation directory we specified earlier.
+<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/04-NamePlatform-section" width="600">
+
+3. In the **Add a Host** section, choose Use Enterprise Console Host.
+<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/05-AddHost-section" width="600">
+
+4. In the **Install the Controller** section:
+	- Select the **Demo profile**
+	- Set the Controller Admin Username to **admin**
+	- Set the Controller **Admin Password** to **welcome1**
+	- Set the Controller Controller Root User Password to **welcome1**
+	- Set Database Root Password to **welcome1**
+	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/06-InstallController-section" width="600">
+
+5. Click the **Submit** button
+
+The installation will begin immediately but it may take a few minutes before the jobs appear and begin reporting their progress on the page. 
+
+2.5 -	After the jobs have completed successfully (up to 15 minutes), click the Controller and Events Service sections to make sure each shows a health state of Normal.
+
+2.6 -	To confirm the Controller is running properly, verify you can connect to its URL in a web browser and authenticate using the information specified in steps 2.4.b and 2.4.c.
+
+http://<ec2-Public-DNS-name>:8090
+
+2.7 -	Ping the Events Service API port in a browser.  A successful “pong” response confirms the service is running properly.
+
+http://<ec2-Public-DNS-name>:9080/_ping
+
+ 
+2.8 -	Deploy the provided license file to the controller directory
+
+sudo mv /home/appd/license.lic /opt/appd/platform/product/controller/
+
+2.9 -	In the Controller UI, confirm the new license has been applied by navigating to the Settings icon ( ⚙) in the upper right corner of the page and selecting License.  Make sure the the license details now show it as a Pro Trial edition and includes entitlements for five of each language agent.
+
+2.10 -	Note: If the licenses are not reflected as below, perform a Controller Restart (Without database restart) from the Platform Admin.
+
+
 
