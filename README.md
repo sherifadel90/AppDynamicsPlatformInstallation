@@ -92,7 +92,7 @@ In this exercise, you will be setting up the Enterprise Console.  This utility p
  	<pre><code>
 	http://[your-ip-address]:[EnterpriseConsolePort]
 	</code></pre>
-	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/02-EnterpriseConsoleLogin.jpg" width="800">
+	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/02-EnterpriseConsoleLogin.png" width="800">
 
 ### Step 4: AppDynamics Controller & Events Service
 
