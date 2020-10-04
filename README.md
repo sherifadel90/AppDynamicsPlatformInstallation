@@ -173,7 +173,7 @@ The EUM Server is not currently integrated with the Enterprise Console so the in
 	- Note the **Events Service Key** for later use.
 	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/13-EUMKey.png" width="600">
  
-3 Configure the Controller for EUM by updating the following parameter values in the Administration Console, clicking the Save button after each change...
+3 Configure the Controller for EUM by updating the following parameter values in the Administration Console, clicking the Save button after each change
 	- eum.beacon.host = [your-ip-address]:7001
 	- eum.beacon.https.host = https://[your-ip-address]:7002
 	- eum.cloud.host = http://localhost:7001
