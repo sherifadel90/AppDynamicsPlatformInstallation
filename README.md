@@ -1,3 +1,4 @@
+![APPD LOGO](assets/images/appd-logo.png)
 # AppDynamics Platform Installation (LINUX)
 
 ## Description
