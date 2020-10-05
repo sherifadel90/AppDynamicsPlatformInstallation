@@ -228,7 +228,7 @@ Reference documentation can be found on the AppDynamics documents site - [EUM Se
 	
 8. Verify the EUM Server is running by pinging the EUM Server port in a browser.  A successful “ping” response confirms it is responding properly.
 	<pre><code>
- 	http://[your-ip-address]:7001/_ping
+ 	http://[your-ip-address]:7001/eumaggregator/ping
  	</code></pre>
 	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/15-EUMPing.png" width="600">
  
@@ -271,7 +271,7 @@ Reference documentation can be found on the AppDynamics documents site - [EUM Se
 	ps -ef | grep -i eum | grep -v grep (one process should be listed)
 	</code></pre>
 
-12. In the Controller UI, confirm the EUM license has been applied by navigating to the Settings icon ( ⚙) in the upper right corner of the page and selecting License.  In the User Experience section of the page, the Account Name and License Key should be visible.  Additionally, the Edition should show EUM Pro or Mobile Pro for Browser Real User Monitoring and Mobile Real User Monitoring, respectively.
+12. In the Controller UI, confirm the EUM license has been applied by navigating to the Settings icon (⚙) in the upper right corner of the page and selecting License.  In the User Experience section of the page, the Account Name and License Key should be visible.  Additionally, the Edition should show EUM Pro or Mobile Pro for Browser Real User Monitoring and Mobile Real User Monitoring, respectively.
 <img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/16-EUMLicense.png" width="600">
 
 
@@ -279,7 +279,7 @@ Reference documentation can be found on the AppDynamics documents site - [EUM Se
 
 ### Notes
 
-1. In case of a Server restart, you can perform the below to start back all the serivces:
+1. In case of a Server restart, you can start back all the serivces viia the CLI:
 	<pre><code>
 	cd /opt/appdynamics/platform/platform-admin
 	bin/platform-admin.sh start-platform-admin
