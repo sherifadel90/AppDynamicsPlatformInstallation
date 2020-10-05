@@ -277,9 +277,9 @@ Reference documentation can be found on the AppDynamics documents site - [EUM Se
 
 -----
 
-### Notes
+## Notes
 
-1. In case of a Server restart, you can start back all the serivces viia the CLI:
+1. In case of a Server restart, you can start back all the serivces via the CLI:
 	<pre><code>
 	cd /opt/appdynamics/platform/platform-admin
 	bin/platform-admin.sh start-platform-admin
@@ -288,5 +288,10 @@ Reference documentation can be found on the AppDynamics documents site - [EUM Se
 	bin/platform-admin.sh submit-job --platform-name AppDPlatform --service events-service --job start
 	</code></pre>
 
+## Next Steps
+
+Upon succesful completion of the above, please refer back to your AppDynamics Channel SE to guide you on the below:
+1. Create a Sample Application Environment
+2. Exercise to Moniitor the Sample Application by Installing AppDynamics Agents
 
 
