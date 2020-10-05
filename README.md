@@ -3,6 +3,7 @@
 ## Description
 
 This lab guides you through the process of installing and configuring the AppDynamics platform components for an on-premise deployment.  The architecture diagram below shows these components with their communication paths and payloads.  
+
 <img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/00-onpremise-diagram.jpg" width="600">
 
 In this Lab for simplicity we will install all AppDynamics Components (Enterprise Console, Controller, Events Service, End User Monitoring Server) on a Standalone Virtual Machine.
@@ -19,8 +20,8 @@ The software versions used in the lab are the most recent generally available at
 
 ### Step 1: Prepare Virtual Machine Specs.
 
-- **Operating System:** Linux or Windows  (The Guide below is based on Linux OS)
-- **Linux Distribution:** Any from the below list (The Guide below is based on CentOS)
+- **Operating System:** Linux or Windows  (This Guide  is based on Linux OS)
+- **Linux Distribution:** Any from the below list (This Guide is based on CentOS7)
 ![SupportedOperatingSystems](assets/images/00-Supported-OperatingSystems.png)
 - **CPU:** 4 Cores (Minimum)
 - **Memory:** 32 GB RAM (Minimum)
@@ -60,7 +61,9 @@ Reference documentation can be found on the AppDynamics documents site - [Enterp
 
 ### Step 3: Install Enterprise Console (aka Platform Admin)
 
-In this exercise, you will be setting up the Enterprise Console.  This utility provides a browser-based user interface that allows an AppDynamics administrator to install and manage the Controller and Events Service components of the AppDynamics platform.  A CLI for the Enterprise Console is available, but is outside the scope of this lab.  Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Documentation](https://docs.appdynamics.com/display/PRO45/Enterprise+Console, "Enterprise Console Documentation").
+In this exercise, you will be setting up the Enterprise Console.  This utility provides a browser-based user interface that allows an AppDynamics administrator to install and manage the Controller and Events Service components of the AppDynamics platform.  A CLI for the Enterprise Console is available, but is outside the scope of this lab.
+
+Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Documentation](https://docs.appdynamics.com/display/PRO45/Enterprise+Console, "Enterprise Console Documentation").
 
 1. Download and copy the Platform Admin Installer Script to the lab host.
    Log into www.download.appdynamics.com to download the "Enterprise Console - 64-bit Linux(sh)"
@@ -112,6 +115,7 @@ The Controller provides the main AppDynamics GUI which is backed by a MySQL data
 
 Installation of both components can be accomplished using the CLI, but that procedure is beyond the scope of this lab.  
 Also note that the lab focuses on installation and configuration procedures in a learning environment, but you should be aware that additional steps may be necessary to address security, performance, availability, and scalability considerations in a production deployment.  
+
 Reference documentation can be found on the AppDynamics web site - [Controller Documentation](https://docs.appdynamics.com/display/PRO45/Controller+Deployment) and [Events Service Documentation](https://docs.appdynamics.com/display/PRO45/Events+Service+Deployment).
 
 1. From the Enterprise Console UI, select the Install tab and click the Express Install type.
@@ -159,21 +163,23 @@ Note: If the licenses are not reflected as below in 10 minutes, perform a Contro
 ### Step 4: Install End User Monitoring Server
 
 In this exercise, you will be setting up the End User Monitoring (EUM) Server.  This component acts as the on-premise processor for data sent from the browser and mobile EUM agents.  
-The EUM Server is not currently integrated with the Enterprise Console so the installation portion will be done from the lab host CLI.  Reference documentation can be found on the AppDynamics documents site - EUM Server Documentation.
+The EUM Server is not currently integrated with the Enterprise Console so the installation portion will be done from the lab host CLI.  
+
+Reference documentation can be found on the AppDynamics documents site - [EUM Server Documentation](https://docs.appdynamics.com/display/PRO45/EUM+Server+Deployment).
 
 1. Open a New Private Window (New Incognito Window in Chrome) to avoid using cached controller credentials from previous browser sessions.
 
-2. Access the Controller Administration Console (see official documentation for reference) by connecting to its URL and authenticating with credentials you specified in Controller Installation wizard (Username: admin, Password: welcome1). This is a separate interface from the primary Controller UI.
+2. Access the Controller [Administration Console](https://docs.appdynamics.com/display/PRO45/Access+the+Administration+Console) by connecting to its URL and authenticating with credentials you specified in Controller Installation wizard (Username: admin, Password: welcome1). This is a separate interface from the primary Controller UI.
 	<pre><code>
  	http://[your-ip-address]:8090/controller/admin.jsp
  	</code></pre>
 	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/12-ControllerAdminLogin.png" width="600">
 
 2. Navigate to the Controller Setting section, and search for **appdynamics.es.eum.key** parameter
-	- Note the **Events Service Key** for later use.
+	- Note the **Events Service Key** for later use in Step 10.
 	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/13-EUMKey.png" width="600">
  
-3. Connect the EUM Server with the AppDynamics Controller by updating the following parameter values in the Administration Console, clicking the Save button after each change
+3. Connect the EUM Server with the AppDynamics Controller by updating the following parameter values in the Administration Console, clicking the **Save button after each change**
 	- eum.beacon.host = [your-ip-address]:7001
 	- eum.beacon.https.host = https://[your-ip-address]:7002
 	- eum.cloud.host = http://localhost:7001
@@ -226,7 +232,7 @@ The EUM Server is not currently integrated with the Enterprise Console so the in
  	</code></pre>
 	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/15-EUMPing.png" width="600">
  
-9. From the EUM processor directory on on the lab host (you must be in this directory for the command to run properly), provision the EUM portion of the license file:
+9. From the EUM processor directory on on the lab host (you must be in eum-processor directory for the command to run properly), provision the EUM portion of the license file:
 	<pre><code>
  	cd /opt/appdynamics/eum/eum-processor
 	./bin/provision-license /opt/appdynamics/platform/product/controller/license.lic
