@@ -25,7 +25,7 @@ The software versions used in the lab are the most recent generally available at
 ![SupportedOperatingSystems](assets/images/00-Supported-OperatingSystems.png)
 - **CPU:** 4 Cores (Minimum)
 - **Memory:** 32 GB RAM (Minimum)
-- **Storage:** 60 GB (Mimimum)
+- **Storage:** 60 GB (Minimum)
 
 ### Step 2: Enterprise Console Requirements
 
