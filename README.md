@@ -195,13 +195,13 @@ Reference documentation can be found on the AppDynamics documents site - [EUM Se
 
 6. On the Host, Make the installer script executable:
 	<pre><code>
- 	chmod a+x euem-64bit-linux-4.5.0.23508.sh
+ 	chmod a+x euem-64bit-linux-20.x.x.x.sh
  	</code></pre>
 
 7. Install the Platform Admin software:
 	<pre><code>
 	sudo su
- 	./euem-64bit-linux-4.5.0.23508.sh
+ 	./euem-64bit-linux-20.x.x.x.sh
  	</code></pre>
     with inputing the below
     	<pre><code>
