@@ -25,14 +25,15 @@ The software versions used in the lab are the most recent generally available at
 - **Linux Distribution:** Any from the below list (This Guide is based on CentOS7)
 ![SupportedOperatingSystems](assets/images/00-Supported-OperatingSystems.png)
 - **CPU:** 4 Cores (Minimum)
-- **Memory:** 32 GB RAM (Minimum)
+- **Memory:** 16 GB RAM (Minimum)
 - **Storage:** 60 GB (Minimum)
+Reference: [Controller Sizing Requirements](https://docs.appdynamics.com/display/PRO45/Controller+System+Requirements)
 
 ### Step 2: Enterprise Console Requirements
 
 The Enterprise Console can run on the same host as the Controller and the embedded Events Service. If this is the case, the machine you choose to run the Enterprise Console must meet the requirements for all the components that run on that machine.
 
-Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Requirements](https://docs.appdynamics.com/display/PRO45/Enterprise+Console+Requirements, "Enterprise Console Requirements").
+Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Requirements](https://docs.appdynamics.com/display/PRO45/Enterprise+Console+Requirements).
 
 1. We will need to install these required libraries
 	<pre><code>
@@ -41,7 +42,7 @@ Reference documentation can be found on the AppDynamics documents site - [Enterp
 	yum install tzdata
 	yum install ncurses-libs
  	</code></pre>
-	Note: the above required libraries are based on Red Hat and CentOS, for other Distros, please refer to [Enterprise Console Requirements](https://docs.appdynamics.com/display/PRO45/Enterprise+Console+Requirements, "Enterprise Console Requirements").
+	Note: the above required libraries are based on Red Hat and CentOS, for other Distros, please refer to [Enterprise Console Requirements](https://docs.appdynamics.com/display/PRO45/Enterprise+Console+Requirements).
 
 2.  AppDynamics requires the following hard and soft per-user limits in Linux: 
     * Open file descriptor limit (nofile): 65535
@@ -64,7 +65,7 @@ Reference documentation can be found on the AppDynamics documents site - [Enterp
 
 In this exercise, you will be setting up the Enterprise Console.  This utility provides a browser-based user interface that allows an AppDynamics administrator to install and manage the Controller and Events Service components of the AppDynamics platform.  A CLI for the Enterprise Console is available, but is outside the scope of this lab.
 
-Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Documentation](https://docs.appdynamics.com/display/PRO45/Enterprise+Console, "Enterprise Console Documentation").
+Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Documentation](https://docs.appdynamics.com/display/PRO45/Enterprise+Console).
 
 1. Download and copy the Platform Admin Installer Script to the lab host.
    Log into www.download.appdynamics.com to download the "Enterprise Console - 64-bit Linux(sh)"
