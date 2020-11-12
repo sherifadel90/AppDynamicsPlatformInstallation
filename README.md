@@ -51,14 +51,14 @@ Reference documentation can be found on the AppDynamics documents site - [Enterp
     
     Following the steps in [Configure User Limits in Linux Controllers](https://docs.appdynamics.com/display/PRO45/Prepare+Linux+for+the+Controller#PrepareLinuxfortheController-configure_in_linuxConfigureUserLimitsinLinux):
   	<pre><code>
-	vi /etc/security/limits.d  	
+	vi /etc/security/limits.d/appdynamics.conf	
  	</code></pre>
 	And add the following at the end of the file:
 	<pre><code>
 	* hard nofile 65535
 	* soft nofile 65535
-	* hard nproc 8192
-	* soft nproc 8192 	
+	* hard nproc 65535
+	* soft nproc 65535 	
  	</code></pre>
 	Then logout from the terminal and login again.
 
