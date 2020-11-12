@@ -289,6 +289,7 @@ Reference documentation can be found on the AppDynamics documents site - [EUM Se
 	bin/platform-admin.sh start-controller-db
 	bin/platform-admin.sh start-controller-appserver
 	bin/platform-admin.sh submit-job --platform-name AppDPlatform --service events-service --job start
+	## Start Back the EUM Server after Machine Restart (To be Filled)
 	</code></pre>
 
 ## Next Steps
