@@ -38,16 +38,16 @@ Reference documentation can be found on the AppDynamics documents site - [Enterp
 
 1. We will need to install these required libraries
 	<pre><code>
- 	yum install libaio
-	yum install numactl
-	yum install tzdata
-	yum install ncurses-libs
+ 	apt-get install libaio
+	apt-get install numactl
+	apt-get install tzdata
+	apt-get install ncurses-libs
  	</code></pre>
 	Note: the above required libraries are based on Red Hat and CentOS, for other Distros, please refer to [Enterprise Console Requirements](https://docs.appdynamics.com/display/PRO45/Enterprise+Console+Requirements).
 
 2.  AppDynamics requires the following hard and soft per-user limits in Linux: 
     * Open file descriptor limit (nofile): 65535
-    * Process limit (nproc): 8192  
+    * Process limit (nproc): 65535  
     
     Following the steps in [Configure User Limits in Linux Controllers](https://docs.appdynamics.com/display/PRO45/Prepare+Linux+for+the+Controller#PrepareLinuxfortheController-configure_in_linuxConfigureUserLimitsinLinux):
   	<pre><code>
