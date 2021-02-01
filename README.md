@@ -25,8 +25,8 @@ The software versions used in the lab are the most recent generally available at
 - **Linux Distribution:** Any from the below list (This Guide is based on CentOS7)
 ![SupportedOperatingSystems](assets/images/00-Supported-OperatingSystems.png)
 - **CPU:** 4 Cores (Minimum)
-- **Memory:** 16 GB RAM (Minimum)
-- **Storage:** 60 GB (Minimum)
+- **Memory:** 16 GB RAM (Minimum), 32 GB RAM (Recommended)
+- **Storage:** 100 GB (Minimum)
 
 Reference: [Controller Sizing Requirements](https://docs.appdynamics.com/display/PRO45/Controller+System+Requirements)
 
