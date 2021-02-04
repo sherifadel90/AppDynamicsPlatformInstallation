@@ -21,7 +21,7 @@ The software versions used in the lab are the most recent generally available at
 
 ### Step 1: Prepare Virtual Machine Specs.
 
-- **Operating System:** Linux or Windows  (This Guide  is based on Linux OS)
+- **Operating System:** Linux or Windows  (This Guide  is based on Linux OS, CentOs7 Distribution)
 - **Linux Distribution:** Any from the below list (This Guide is based on CentOS7)
 ![SupportedOperatingSystems](assets/images/00-Supported-OperatingSystems.png)
 - **CPU:** 4 Cores (Minimum)
