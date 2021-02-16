@@ -182,7 +182,7 @@ Reference documentation can be found on the AppDynamics documents site - [EUM Se
 	- Note the **Events Service Key** for later use in Step 10.
 	<img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/13-EUMKey.png" width="600">
  
-3. Connect the EUM Server with the AppDynamics Controller by updating the following parameter values in the Administration Console, clicking the **Save button after each change**
+3. Connect the EUM Server with the AppDynamics Controller & Events Service by updating the following parameter values in the Administration Console, clicking the **Save button after each change**
 	- eum.beacon.host = [your-ip-address]:7001 #That should be the EUM Server IP Address
 	- eum.beacon.https.host = https://[your-ip-address]:7002 #That should be the EUM Server IP Address
 	- eum.cloud.host = http://localhost:7001 #That should be the EUM Server IP Address
