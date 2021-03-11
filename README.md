@@ -69,7 +69,7 @@ In this exercise, you will be setting up the Enterprise Console.  This utility p
 Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Documentation](https://docs.appdynamics.com/display/latest/Enterprise+Console).
 
 1. Download and copy the Platform Admin Installer Script to the lab host.
-   Log into www.download.appdynamics.com to download the "Enterprise Console - 64-bit Linux(sh)"
+   Log into / Register on https://accounts.appdynamics.com to download the "Enterprise Console - 64-bit Linux(sh)"
 ![EnterpirseConsoleDownload](assets/images/01-EnterpriseConsoleDownload.png)
 
 2. Copy the .sh file to your Host either using SCP on if your Desktop is MAC/Linux or using WINSCP if your Desktop is Windows
