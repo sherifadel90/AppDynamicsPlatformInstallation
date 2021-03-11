@@ -34,7 +34,7 @@ Reference: [Controller Sizing Requirements](https://docs.appdynamics.com/display
 
 The Enterprise Console can run on the same host as the Controller and the embedded Events Service. If this is the case, the machine you choose to run the Enterprise Console must meet the requirements for all the components that run on that machine.
 
-Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Requirements](https://docs.appdynamics.com/display/PRO45/Enterprise+Console+Requirements).
+Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Requirements](https://docs.appdynamics.com/display/latest/Enterprise+Console+Requirements).
 
 1. We will need to install these required libraries
 	<pre><code>
@@ -43,13 +43,13 @@ Reference documentation can be found on the AppDynamics documents site - [Enterp
 	sudo apt-get install tzdata
 	sudo apt-get install libncurses5
  	</code></pre>
-	Note: the above required libraries are based on Red Hat and CentOS, for other Distros, please refer to [Enterprise Console Requirements](https://docs.appdynamics.com/display/PRO45/Enterprise+Console+Requirements).
+	Note: the above required libraries are based on Red Hat and CentOS, for other Distros, please refer to [Enterprise Console Requirements](https://docs.appdynamics.com/display/latest/Enterprise+Console+Requirements).
 
 2.  AppDynamics requires the following hard and soft per-user limits in Linux: 
     * Open file descriptor limit (nofile): 65535
     * Process limit (nproc): 65535  
     
-    Following the steps in [Configure User Limits in Linux Controllers](https://docs.appdynamics.com/display/PRO45/Prepare+Linux+for+the+Controller#PrepareLinuxfortheController-configure_in_linuxConfigureUserLimitsinLinux):
+    Following the steps in [Configure User Limits in Linux Controllers](https://docs.appdynamics.com/display/latest/Prepare+Linux+for+the+Controller#PrepareLinuxfortheController-configure_in_linuxConfigureUserLimitsinLinux):
   	<pre><code>
 	vi /etc/security/limits.d/appdynamics.conf	
  	</code></pre>
@@ -66,7 +66,7 @@ Reference documentation can be found on the AppDynamics documents site - [Enterp
 
 In this exercise, you will be setting up the Enterprise Console.  This utility provides a browser-based user interface that allows an AppDynamics administrator to install and manage the Controller and Events Service components of the AppDynamics platform.  A CLI for the Enterprise Console is available, but is outside the scope of this lab.
 
-Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Documentation](https://docs.appdynamics.com/display/PRO45/Enterprise+Console).
+Reference documentation can be found on the AppDynamics documents site - [Enterprise Console Documentation](https://docs.appdynamics.com/display/latest/Enterprise+Console).
 
 1. Download and copy the Platform Admin Installer Script to the lab host.
    Log into www.download.appdynamics.com to download the "Enterprise Console - 64-bit Linux(sh)"
@@ -119,7 +119,7 @@ The Controller provides the main AppDynamics GUI which is backed by a MySQL data
 Installation of both components can be accomplished using the CLI, but that procedure is beyond the scope of this lab.  
 Also note that the lab focuses on installation and configuration procedures in a learning environment, but you should be aware that additional steps may be necessary to address security, performance, availability, and scalability considerations in a production deployment.  
 
-Reference documentation can be found on the AppDynamics web site - [Controller Documentation](https://docs.appdynamics.com/display/PRO45/Controller+Deployment) and [Events Service Documentation](https://docs.appdynamics.com/display/PRO45/Events+Service+Deployment).
+Reference documentation can be found on the AppDynamics web site - [Controller Documentation](https://docs.appdynamics.com/display/latest/Controller+Deployment) and [Events Service Documentation](https://docs.appdynamics.com/display/latest/Events+Service+Deployment).
 
 1. From the Enterprise Console UI, select the Install tab and click the Express Install type.
 <img src="https://github.com/sherifadel90/AppDynamicsPlatformInstallation/blob/master/assets/images/03-ExpressInstall-Step.png" width="600">
@@ -168,11 +168,11 @@ Note: If the licenses are not reflected as below in 10 minutes, perform a Contro
 In this exercise, you will be setting up the End User Monitoring (EUM) Server.  This component acts as the on-premise processor for data sent from the browser and mobile EUM agents.  
 The EUM Server is not currently integrated with the Enterprise Console so the installation portion will be done from the lab host CLI.  
 
-Reference documentation can be found on the AppDynamics documents site - [EUM Server Documentation](https://docs.appdynamics.com/display/PRO45/EUM+Server+Deployment).
+Reference documentation can be found on the AppDynamics documents site - [EUM Server Documentation](https://docs.appdynamics.com/display/latest/EUM+Server+Deployment).
 
 1. Open a New Private Window (New Incognito Window in Chrome) to avoid using cached controller credentials from previous browser sessions.
 
-2. Access the Controller [Administration Console](https://docs.appdynamics.com/display/PRO45/Access+the+Administration+Console) by connecting to its URL and authenticating with credentials you specified in Controller Installation wizard (Username: admin, Password: welcome1). This is a separate interface from the primary Controller UI.
+2. Access the Controller [Administration Console](https://docs.appdynamics.com/display/latest/Access+the+Administration+Console) by connecting to its URL and authenticating with credentials you specified in Controller Installation wizard (Username: admin, Password: welcome1). This is a separate interface from the primary Controller UI.
 	<pre><code>
  	http://[your-ip-address]:8090/controller/admin.jsp
  	</code></pre>
