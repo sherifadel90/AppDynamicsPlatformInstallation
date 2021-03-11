@@ -28,7 +28,7 @@ The software versions used in the lab are the most recent generally available at
 - **Memory:** 16 GB RAM (Minimum), 32 GB RAM (Recommended)
 - **Storage:** 100 GB (Minimum)
 
-Reference: [Controller Sizing Requirements](https://docs.appdynamics.com/display/PRO45/Controller+System+Requirements)
+Reference: [Controller Sizing Requirements](https://docs.appdynamics.com/display/latest/Controller+System+Requirements)
 
 ### Step 2: Enterprise Console Requirements
 
