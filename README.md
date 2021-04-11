@@ -38,10 +38,10 @@ Reference documentation can be found on the AppDynamics documents site - [Enterp
 
 1. We will need to install these required libraries
 	<pre><code>
- 	sudo apt-get install libaio1
-	sudo apt-get install numactl
-	sudo apt-get install tzdata
-	sudo apt-get install libncurses5
+	yum install libaio
+	yum install numactl
+	yum install tzdata
+	yum install ncurses-libs-5.x
  	</code></pre>
 	Note: the above required libraries are based on Red Hat and CentOS, for other Distros, please refer to [Enterprise Console Requirements](https://docs.appdynamics.com/display/latest/Enterprise+Console+Requirements).
 
